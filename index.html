@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+        <!-- Check dark mode preference immediately and apply it -->
+        <script>
+          if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+          }
+        </script>
+      </head>      
+<body>
+  <header>
+    <h1>Sawyer Greaves</h1>
+    <div class="theme-toggle">
+        <!-- <i class="fas fa-sun"></i> -->
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-checkbox">
+          <span class="slider round"></span>
+        </label>
+        <!-- <i class="fas fa-moon"></i> -->
+      </div>
+      
+  </header>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out via email or message me on social media!</p>
+    <ul>
+      <li><a href="mailto:greaves.sawyer@gmail.com"><i class="fas fa-envelope"></i> greaves.sawyer@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/sawyer-greaves-555616277" target="_blank"><i class="fab fa-linkedin"></i> Sawyer Greaves</a></li>
+      <li><a href="https://www.instagram.com/sawyer_greaves/" target="_blank"><i class="fab fa-instagram"></i> sawyer_greaves</a></li>
+      <li><a href="https://github.com/Rodeosocks" target="_blank"><i class="fab fa-github"></i> RodeoSocks</a></li>
+    </ul>
+  </section>  
+  
+  <section id="academics">
+    <h2>Academics</h2>
+    <div class="transcript-cards">
+      <a class="transcript-card" href="transcripts/spring25transcriptSG.pdf" download data-tooltip="Click to view transcript">
+        <h3>B.S. Mechanical Engineering</h3>
+        <p>University of Utah — Dec. 2025</p>
+        <p>GPA: 3.957</p>
+      </a>
+
+      <!-- <a class="transcript-card" href="transcripts/spring26transcriptSG.pdf" download data-tooltip="Click to view transcript"> -->
+      <!-- Replace the line below with the line above next year -->
+      <div class="transcript-card disabled-card" data-tooltip="Transcript coming soon">
+        <h3>M.S. Robotics</h3>
+        <p>University of Utah — Starting Jan. 2026</p>
+        <p>Expected Graduation: May 2027</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="projects-container">
+    <h2>My Projects</h2> <!-- Heading outside the grid container -->
+    <div id="projects">
+
+      <a href="project1.html" class="project-card" data-tooltip="Click to learn more">
+        <img src="images/test_image.png" alt="Robotic Arm">
+        <h3>Robotic Arm</h3>
+        <p>A servo-controlled arm with Arduino.</p>
+      </a>
+
+      <a href="project1.html" class="project-card" data-tooltip="Click to learn more">
+        <img src="images/test_image.png" alt="Line Following Robot">
+        <h3>Line Following Robot</h3>
+        <p>A robot that tracks a path using IR sensors.</p>
+      </a>
+
+      <a href="project1.html" class="project-card" data-tooltip="Click to learn more">
+        <img src="images/test_image.png" alt="3D-Printed Drone Frame">
+        <h3>3D-Printed Drone Frame</h3>
+        <p>Custom-designed frame for quadcopter builds.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <!-- <p>© 2025 My Name</p> -->
+  </footer>
+  <script>
+    const toggle = document.getElementById('theme-toggle-checkbox');
+  
+    // Set initial toggle state based on saved preference
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggle.checked = true;
+    }
+  
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>

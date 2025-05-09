@@ -193,11 +193,11 @@ body.dark-mode .project-card:hover {
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 34px;
     transition: 0.4s;
-    background: radial-gradient(circle at 30% 90%, #ffffffad 5px, transparent 5px),
-                radial-gradient(circle at 40% 90%, #ffffffad 8px, transparent 5px),
-                radial-gradient(circle at 50% 70%, #ffffffad 6px, transparent 5px),
-                radial-gradient(circle at 58% 90%, #ffffffad 5px, transparent 5px),
-                radial-gradient(circle at 50% 90%, #ffffffad 5px, transparent 5px),
+    background: radial-gradient(circle at 30% 90%, #fffffff0 5px, transparent 5px),
+                radial-gradient(circle at 40% 90%, #fffffff0 8px, transparent 5px),
+                radial-gradient(circle at 50% 70%, #fffffff0 6px, transparent 5px),
+                radial-gradient(circle at 58% 90%, #fffffff0 5px, transparent 5px),
+                radial-gradient(circle at 50% 90%, #fffffff0 5px, transparent 5px),
                 linear-gradient(to top, #63d9e9, #04a9eb); /* light blue background */
     background-size: 100% 100%;
     display: flex;
